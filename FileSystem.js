@@ -4,8 +4,8 @@ const print = require('./printer')
 const fromUrl = './Original Items'
 const pasteUrl = './Pasted Items'
 
-let dirBuf = Buffer.from(fromUrl);
-let files = fs.readdirSync(fromUrl);
+let dirBuf = Buffer.from(fromUrl)
+let files = fs.readdirSync(fromUrl)
 
 for (var i = 0; i < files.length ; i++) {
 	const fileName = files[i]
@@ -14,5 +14,5 @@ for (var i = 0; i < files.length ; i++) {
 			print.showError(err)
 		else
 			print.show(fileName)
-	});
+	})
 }
